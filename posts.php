@@ -37,12 +37,12 @@
                                     <!-- writes out the url  and title for a specific blogpost-->
                                     <h2 class="title">
                                         <a
-                                            href="<?php echo esc_url( get_permalink( get_page_by_title("") ) ); ?>id=<?php echo $post->ID;?>">
+                                            href="<?php echo esc_url( get_permalink( get_page_by_title("") ) ); ?>">
                                             <?php the_title();  ?> </a>
                                     </h2>
                                     <ul class="meta">
                                         <li>
-                                            <i class="fa fa-calendar"></i> <?php the_date('F j, Y');  ?></p>
+                                            <i class="fa fa-calendar"></i> <?php echo get_the_date ('F j, Y');  ?></p>
                                         </li>
                                         <!--getting the author of the post dynamic-->
                                         <li>
@@ -52,7 +52,7 @@
                                         <!--getting the category of the post dynamic-->
                                         <li>
                                             <i class="fa fa-tag"></i>
-                                            <a href="<?php echo get_the_category_list(", "); ?>"> </a>
+                                            <a href=><?php echo get_the_category_list(", ") ?></a>
                                         </li>
                                     </ul>
 
@@ -118,7 +118,7 @@
                                     <h2>Kategorier</h2>
                                     <ul>
                                         <li class="cat-item">
-                                            <a href="<?php echo get_the_category_list(", "); ?>"> </a>
+                                            <a href=> <?php echo get_the_category_list(", "); ?> </a>
                                         </li>
                                         <li class="cat-item">
 
