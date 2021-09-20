@@ -36,8 +36,7 @@
 
                                     <!-- writes out the url  and title for a specific blogpost-->
                                     <h2 class="title">
-                                        <a
-                                            href="<?php echo esc_url( get_permalink( get_page_by_title("") ) ); ?>">
+                                    <a href="<?php the_permalink(); ?> ">
                                             <?php the_title();  ?> </a>
                                     </h2>
                                     <ul class="meta">
@@ -115,15 +114,17 @@
                                     </ul>
                                 </li>
                                 <li class="categories">
-                                    <h2>Kategorier</h2>
-                                    <ul>
-                                        <li class="cat-item">
-                                            <a href=> <?php echo get_the_category_list(", "); ?> </a>
-                                        </li>
-                                        <li class="cat-item">
+                                <h2>Kategorier</h2>
+                                        <ul>
+                                            <?php
+                $categories = get_categories( array(
+                    'orderby' => 'name',
+                    'order'   => 'ASC'
+                ) );
 
-                                        </li>
-                                    </ul>
+                foreach( $categories as $category ) {
+                echo '<li class="cat-item"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a><span class="text-white"> (' . $category->category_count . ')' . '</span></li>';   
+                } ?>
                                 </li>
                                 </ul>
                             </div>
