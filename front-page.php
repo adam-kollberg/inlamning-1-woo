@@ -1,3 +1,6 @@
+<?php /* Template Name: Front-page*/ ?>
+
+
 
 <?php get_header(); ?>
 <div id="wrap"> </div>

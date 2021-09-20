@@ -99,20 +99,21 @@
                                     </li>
                                 </ul>
                                 <ul role="navigation">
-                                    <li class="pagenav">
-                                        <h2 style="color: #f3f3f3">Sidor</h2>
+                                <h2>Sidor</h2>
                                         <?php wp_nav_menu( array(
-                                 'theme_location' => 'sidebarMenu'));?>
+                                 'theme_location' => 'sidebarMenu', 'menu_id' => 'sidor-container' ));?>
+                                    </li>
+                                    <li>
                                 </li>
                                 </ul>
                                 <li>
                                     <h2>Arkiv</h2>
                                     <ul>
-                                        <li>
-                                            <?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'option' ) ); ?>
-                                        </li>
-                                    </ul>
-                                </li>
+                                            <li>
+                                                <?php wp_get_archives( array( 'type' => 'monthly', 'format' => 'a' ) ); ?>
+                                            </li>
+                                        </ul>
+                                    </li>
                                 <li class="categories">
                                 <h2>Kategorier</h2>
                                         <ul>

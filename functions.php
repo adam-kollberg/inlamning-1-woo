@@ -57,4 +57,7 @@ function register_my_menus() {
   add_action ('after_setup_theme', 'add_thumbnails');
 
  
+
+
 // using a widget init hook to hook custom function, call the register sidebar ( the widget is created as a option inside appearance in wordpress)
+
